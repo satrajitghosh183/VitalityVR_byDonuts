@@ -11,3 +11,6 @@ The VR Exercise Game uses sensors built into the Oculus headset to collect data 
 We take the privacy and security of your data very seriously. All data collected by the VR Exercise Game is stored securely in the cloud and is not shared with any third parties without your consent. We use industry-standard encryption and security protocols to ensure that your data is safe and secure.
 ## Conclusion
 The VR Exercise Game is a fun and engaging way to exercise while also tracking your fitness data. The game is easy to use and provides accurate and reliable data that can be used to improve your fitness. The unique displays on the website provide valuable insights and analysis, and the game is designed to be both fun and challenging. Give it a try and start your fitness journey today!
+
+
+![image](https://user-images.githubusercontent.com/83156880/230038558-9fa59cf9-1ede-4485-99e5-1558c67553c2.png)
