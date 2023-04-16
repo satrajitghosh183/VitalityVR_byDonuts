@@ -1,0 +1,17 @@
+.leaflet-container{
+
+    width: 50vw;
+    height: 50vh;
+    margin-left: 320px;
+    margin-top: 50px;
+  }
+
+  /* .fontawesomeicon::before {
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+ }
+
+.Stairs::before {
+   font: var(--fa-font-solid);
+    content: ' \e289'; */
