@@ -12,6 +12,12 @@ We take the privacy and security of your data very seriously. All data collected
 ## Conclusion
 The VR Exercise Game is a fun and engaging way to exercise while also tracking your fitness data. The game is easy to use and provides accurate and reliable data that can be used to improve your fitness. The unique displays on the website provide valuable insights and analysis, and the game is designed to be both fun and challenging. Give it a try and start your fitness journey today!
 
+
+PIPELINE 
+![Blank diagram](https://user-images.githubusercontent.com/83156880/232259323-64370e18-14bd-4bdc-b9a4-d8e81db11503.png)
+
+
+
 Hand Exercise Game Image
 
 
@@ -31,5 +37,25 @@ Google Cloud+AMD Instance Usage
 ![Screenshot 2023-04-14 114636](https://user-images.githubusercontent.com/83156880/232253927-4fc1d7cd-2826-4320-9d4e-6f8998e51462.png)
 
 
+Website Images
 
+![WhatsApp Image 2023-04-16 at 05 32 58](https://user-images.githubusercontent.com/83156880/232259172-0475ae1f-8e80-4485-b97d-4f9f7a8ee520.jpg)
+
+![WhatsApp Image 2023-04-16 at 05 33 46](https://user-images.githubusercontent.com/83156880/232259195-1d497d93-7075-4cb2-9327-dc54ec51ed7d.jpg)
+
+![WhatsApp Image 2023-04-16 at 05 34 09](https://user-images.githubusercontent.com/83156880/232259215-e13ee919-6161-4474-ace2-071c581e7dfe.jpg)
+
+![WhatsApp Image 2023-04-16 at 05 34 42](https://user-images.githubusercontent.com/83156880/232259230-ef742e27-9b58-4231-a7f3-ba51a4ff65f4.jpg)
+
+![WhatsApp Image 2023-04-16 at 05 42 01](https://user-images.githubusercontent.com/83156880/232259417-8f94519d-e7f9-4b3f-b332-4fe3397dda4f.jpg)
+
+
+
+
+
+Future Plans
+
+
+Window VR Application development in progress 
+![image](https://user-images.githubusercontent.com/83156880/232258978-0ee04c00-220f-489a-91a5-f697e0e53f1b.png)
 
