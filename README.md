@@ -28,6 +28,11 @@ Full Body Cardio Game Image
 ![image](https://user-images.githubusercontent.com/83156880/232253663-513b3d97-db51-4ad9-ab8c-070386539006.png)
 
 
+
+![WhatsApp Image 2023-05-24 at 11 46 27](https://github.com/satrajitghosh183/VitalityVR_byDonuts/assets/83156880/98a73f87-6035-4a83-bba2-9d866b5551fa)
+
+
+
 Google Cloud+AMD Instance Usage 
 
 ![Screenshot 2023-04-14 114511](https://user-images.githubusercontent.com/83156880/232253897-9fca9dc9-cc39-4b16-98bb-e5f4d491782a.png)
@@ -43,10 +48,10 @@ Website Images
 
 ![WhatsApp Image 2023-05-24 at 11 41 24](https://github.com/satrajitghosh183/VitalityVR_byDonuts/assets/83156880/2768b66d-e02e-47c3-a4e3-f3194dec49d6)
 
+![WhatsApp Image 2023-05-24 at 11 42 13](https://github.com/satrajitghosh183/VitalityVR_byDonuts/assets/83156880/e1998fdf-37a1-4213-92b5-58e6ac0da71a)
+![WhatsApp Image 2023-05-24 at 11 42 50](https://github.com/satrajitghosh183/VitalityVR_byDonuts/assets/83156880/90bcdc2e-6541-4f09-9a6a-887a56cafea5)
+![WhatsApp Image 2023-05-24 at 11 46 27](https://github.com/satrajitghosh183/VitalityVR_byDonuts/assets/83156880/8581c604-9b77-4def-bfd3-3f403211f88c)
 
-![WhatsApp Image 2023-04-16 at 05 33 46](https://user-images.githubusercontent.com/83156880/232259195-1d497d93-7075-4cb2-9327-dc54ec51ed7d.jpg)
-
-![WhatsApp Image 2023-04-16 at 05 34 09](https://user-images.githubusercontent.com/83156880/232259215-e13ee919-6161-4474-ace2-071c581e7dfe.jpg)
 
 ![WhatsApp Image 2023-04-16 at 05 34 42](https://user-images.githubusercontent.com/83156880/232259230-ef742e27-9b58-4231-a7f3-ba51a4ff65f4.jpg)
 
