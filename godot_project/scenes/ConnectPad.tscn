@@ -1,0 +1,407 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scripts/ConnectPad.gd" type="Script" id=1]
+[ext_resource path="res://themes/vrworkout_theme.theme" type="Theme" id=5]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 1, 1, 1, 1 )
+
+[node name="Control" type="Control"]
+margin_left = 24.0
+margin_right = 64.0
+margin_bottom = 40.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ConnectPad" type="Control" parent="."]
+margin_left = 248.0
+margin_right = 248.0
+rect_pivot_offset = Vector2( -384.039, 92 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 476.581 ],
+"_edit_use_anchors_": false
+}
+
+[node name="Button0_1" type="Button" parent="ConnectPad"]
+margin_right = 92.0
+margin_bottom = 92.0
+focus_mode = 0
+theme = ExtResource( 5 )
+action_mode = 0
+text = "1"
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button1_1" type="Button" parent="ConnectPad"]
+margin_top = 128.0
+margin_right = 92.0
+margin_bottom = 220.0
+theme = ExtResource( 5 )
+action_mode = 0
+text = "6"
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2_1" type="Button" parent="ConnectPad"]
+margin_top = 256.0
+margin_right = 92.0
+margin_bottom = 348.0
+theme = ExtResource( 5 )
+action_mode = 0
+text = "G"
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3_1" type="Button" parent="ConnectPad"]
+margin_top = 384.0
+margin_right = 92.0
+margin_bottom = 476.0
+theme = ExtResource( 5 )
+action_mode = 0
+text = "R"
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3_2" type="Button" parent="ConnectPad"]
+margin_left = 128.0
+margin_top = 384.0
+margin_right = 220.0
+margin_bottom = 476.0
+theme = ExtResource( 5 )
+action_mode = 0
+text = "U"
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3_3" type="Button" parent="ConnectPad"]
+margin_left = 256.0
+margin_top = 384.0
+margin_right = 348.0
+margin_bottom = 476.0
+theme = ExtResource( 5 )
+action_mode = 0
+text = "W"
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3_4" type="Button" parent="ConnectPad"]
+margin_left = 384.0
+margin_top = 384.0
+margin_right = 481.0
+margin_bottom = 476.0
+theme = ExtResource( 5 )
+action_mode = 0
+text = "X"
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2_2" type="Button" parent="ConnectPad"]
+margin_left = 128.0
+margin_top = 256.0
+margin_right = 220.0
+margin_bottom = 348.0
+theme = ExtResource( 5 )
+action_mode = 0
+text = "I"
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2_3" type="Button" parent="ConnectPad"]
+margin_left = 256.0
+margin_top = 256.0
+margin_right = 348.0
+margin_bottom = 348.0
+theme = ExtResource( 5 )
+action_mode = 0
+text = "K"
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2_4" type="Button" parent="ConnectPad"]
+margin_left = 384.0
+margin_top = 256.0
+margin_right = 476.0
+margin_bottom = 348.0
+theme = ExtResource( 5 )
+action_mode = 0
+text = "L"
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button1_2" type="Button" parent="ConnectPad"]
+margin_left = 128.0
+margin_top = 128.0
+margin_right = 220.0
+margin_bottom = 220.0
+theme = ExtResource( 5 )
+action_mode = 0
+text = "7"
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button1_3" type="Button" parent="ConnectPad"]
+margin_left = 256.0
+margin_top = 128.0
+margin_right = 348.0
+margin_bottom = 220.0
+theme = ExtResource( 5 )
+action_mode = 0
+text = "8"
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button1_4" type="Button" parent="ConnectPad"]
+margin_left = 384.0
+margin_top = 128.0
+margin_right = 476.0
+margin_bottom = 220.0
+theme = ExtResource( 5 )
+action_mode = 0
+text = "E"
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button0_2" type="Button" parent="ConnectPad"]
+margin_left = 128.0
+margin_right = 220.0
+margin_bottom = 92.0
+theme = ExtResource( 5 )
+action_mode = 0
+text = "2"
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button0_3" type="Button" parent="ConnectPad"]
+margin_left = 256.0
+margin_right = 348.0
+margin_bottom = 92.0
+theme = ExtResource( 5 )
+action_mode = 0
+text = "3"
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button0_4" type="Button" parent="ConnectPad"]
+margin_left = 384.0
+margin_right = 476.0
+margin_bottom = 92.0
+theme = ExtResource( 5 )
+action_mode = 0
+text = "4"
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Enter Room" type="Button" parent="ConnectPad"]
+anchor_left = 0.699
+anchor_top = 0.25
+anchor_right = 0.812
+anchor_bottom = 0.3
+margin_left = 503.0
+margin_top = 128.0
+margin_right = 743.0
+margin_bottom = 192.0
+rect_min_size = Vector2( 240, 48 )
+theme = ExtResource( 5 )
+action_mode = 0
+text = "Enter Room"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Clear" type="Button" parent="ConnectPad"]
+anchor_left = 0.699
+anchor_top = 0.424
+anchor_right = 0.812
+anchor_bottom = 0.474
+margin_left = 503.0
+margin_top = 225.088
+margin_right = 743.0
+margin_bottom = 289.088
+theme = ExtResource( 5 )
+action_mode = 0
+text = "Clear"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CreateRoom" type="Button" parent="ConnectPad"]
+anchor_left = 0.699
+anchor_top = 0.587
+anchor_right = 0.812
+anchor_bottom = 0.649
+margin_left = 503.0
+margin_top = 316.544
+margin_right = 743.0
+margin_bottom = 380.544
+theme = ExtResource( 5 )
+action_mode = 0
+text = "Create Room"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ExitRoom" type="Button" parent="ConnectPad"]
+anchor_left = 0.699
+anchor_top = 0.762
+anchor_right = 0.812
+anchor_bottom = 0.812
+margin_left = 503.0
+margin_top = 412.144
+margin_right = 743.0
+margin_bottom = 476.144
+theme = ExtResource( 5 )
+action_mode = 0
+text = "Exit Room"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RoomNumberLabel" type="RichTextLabel" parent="ConnectPad"]
+anchor_left = 0.637
+anchor_top = 0.013
+anchor_right = 0.862
+anchor_bottom = 0.1
+margin_left = 502.0
+margin_top = 7.0
+margin_right = 762.0
+margin_bottom = 69.0
+theme = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[center]MULTIPLAYER
+ROOM NUMBER[/center]"
+text = "MULTIPLAYER
+ROOM NUMBER"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Code" type="Label" parent="ConnectPad"]
+anchor_left = 0.637
+anchor_top = 0.138
+anchor_right = 0.637
+anchor_bottom = 0.138
+margin_left = 503.0
+margin_top = 70.656
+margin_right = 743.0
+margin_bottom = 110.656
+theme = ExtResource( 5 )
+custom_styles/normal = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ConnectPad"]
+margin_left = -511.0
+margin_top = -0.108
+margin_right = -327.0
+margin_bottom = 31.892
+theme = ExtResource( 5 )
+text = "ENTER YOUR NAME"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RoomListLabel" type="Label" parent="ConnectPad"]
+margin_left = -511.0
+margin_top = 79.892
+margin_right = -288.0
+margin_bottom = 111.892
+theme = ExtResource( 5 )
+text = "PLAYERS IN THIS ROOM"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayerName" type="LineEdit" parent="ConnectPad"]
+margin_left = -511.0
+margin_top = 32.834
+margin_right = -261.0
+margin_bottom = 72.834
+theme = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayerList" type="ItemList" parent="ConnectPad"]
+margin_left = -511.0
+margin_top = 115.405
+margin_right = -87.0
+margin_bottom = 482.405
+theme = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MPInfo" type="Label" parent="."]
+margin_top = 145.0
+margin_right = 743.0
+margin_bottom = 334.0
+theme = ExtResource( 5 )
+text = "Multiplayer is currently only available in the beta version
+
+If you are a beta tester running the latest version go to the connect menu behind you and activate the online features to gain access to the multiplayer menu"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="button_down" from="ConnectPad/Button0_1" to="." method="_on_Button_button_down" binds= [ "1" ]]
+[connection signal="button_down" from="ConnectPad/Button1_1" to="." method="_on_Button_button_down" binds= [ "6" ]]
+[connection signal="button_down" from="ConnectPad/Button2_1" to="." method="_on_Button_button_down" binds= [ "G" ]]
+[connection signal="button_down" from="ConnectPad/Button3_1" to="." method="_on_Button_button_down" binds= [ "R" ]]
+[connection signal="button_down" from="ConnectPad/Button3_2" to="." method="_on_Button_button_down" binds= [ "U" ]]
+[connection signal="button_down" from="ConnectPad/Button3_3" to="." method="_on_Button_button_down" binds= [ "W" ]]
+[connection signal="button_down" from="ConnectPad/Button3_4" to="." method="_on_Button_button_down" binds= [ "X" ]]
+[connection signal="button_down" from="ConnectPad/Button2_2" to="." method="_on_Button_button_down" binds= [ "I" ]]
+[connection signal="button_down" from="ConnectPad/Button2_3" to="." method="_on_Button_button_down" binds= [ "K" ]]
+[connection signal="button_down" from="ConnectPad/Button2_4" to="." method="_on_Button_button_down" binds= [ "L" ]]
+[connection signal="button_down" from="ConnectPad/Button1_2" to="." method="_on_Button_button_down" binds= [ "7" ]]
+[connection signal="button_down" from="ConnectPad/Button1_3" to="." method="_on_Button_button_down" binds= [ "9" ]]
+[connection signal="button_down" from="ConnectPad/Button1_4" to="." method="_on_Button_button_down" binds= [ "E" ]]
+[connection signal="button_down" from="ConnectPad/Button0_2" to="." method="_on_Button_button_down" binds= [ "2" ]]
+[connection signal="button_down" from="ConnectPad/Button0_3" to="." method="_on_Button_button_down" binds= [ "3" ]]
+[connection signal="button_down" from="ConnectPad/Button0_4" to="." method="_on_Button_button_down" binds= [ "4" ]]
+[connection signal="button_down" from="ConnectPad/Enter Room" to="." method="_on_Enter_Room_pressed"]
+[connection signal="button_down" from="ConnectPad/Clear" to="." method="_on_Clear_button_down"]
+[connection signal="button_down" from="ConnectPad/CreateRoom" to="." method="_on_CreateRoom_button_down"]
+[connection signal="button_down" from="ConnectPad/ExitRoom" to="." method="_on_ExitRoom_button_down"]
+[connection signal="gui_input" from="ConnectPad/PlayerName" to="." method="_on_PlayerName_gui_input"]
+[connection signal="text_entered" from="ConnectPad/PlayerName" to="." method="_on_PlayerName_text_entered"]

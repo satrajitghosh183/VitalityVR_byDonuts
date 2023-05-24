@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://RunIndicator.gd" type="Script" id=2]
+[ext_resource path="res://scenes/SpeedText.tscn" type="PackedScene" id=5]
+
+[node name="Spatial" type="Spatial"]
+script = ExtResource( 2 )
+
+[node name="speed_text" parent="." instance=ExtResource( 5 )]
+transform = Transform( 0.8, 0, 0, 0, -3.49691e-08, -0.8, 0, 0.8, -3.49691e-08, -2.38353, -0.198404, 0 )

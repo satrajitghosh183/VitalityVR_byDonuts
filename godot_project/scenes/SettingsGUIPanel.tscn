@@ -1,0 +1,435 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://scenes/NumberEntry.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scripts/SettingsGUIPanel.gd" type="Script" id=3]
+[ext_resource path="res://assets/toggle_switch_on.png" type="Texture" id=4]
+[ext_resource path="res://assets/toggle_switch_off.png" type="Texture" id=5]
+[ext_resource path="res://themes/vrworkout_theme.theme" type="Theme" id=6]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="StyleBoxEmpty" id=5]
+
+[sub_resource type="StyleBoxEmpty" id=6]
+
+[sub_resource type="StyleBoxEmpty" id=7]
+
+[sub_resource type="StyleBoxEmpty" id=8]
+
+[sub_resource type="StyleBoxEmpty" id=9]
+
+[sub_resource type="StyleBoxEmpty" id=10]
+
+[sub_resource type="StyleBoxEmpty" id=11]
+
+[sub_resource type="StyleBoxEmpty" id=12]
+
+[sub_resource type="StyleBoxEmpty" id=13]
+
+[sub_resource type="StyleBoxEmpty" id=14]
+
+[sub_resource type="StyleBoxEmpty" id=15]
+
+[sub_resource type="StyleBoxEmpty" id=16]
+
+[sub_resource type="StyleBoxEmpty" id=17]
+
+[node name="SettingsGUI" type="Control"]
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 435.0 ],
+"_edit_use_anchors_": false,
+"_edit_vertical_guides_": [ 918.0, 529.0 ]
+}
+
+[node name="HoldCue" type="Label" parent="."]
+margin_left = 64.0
+margin_right = 173.0
+margin_bottom = 35.0
+theme = ExtResource( 6 )
+text = "Hold Cues"
+
+[node name="HoldCueButton" type="CheckButton" parent="HoldCue"]
+margin_top = 32.0
+margin_right = 268.0
+margin_bottom = 168.0
+rect_scale = Vector2( 0.4, 0.4 )
+theme = ExtResource( 6 )
+custom_icons/off = ExtResource( 5 )
+custom_icons/on = ExtResource( 4 )
+custom_styles/focus = SubResource( 1 )
+expand_icon = true
+
+[node name="Parcour" type="Label" parent="."]
+margin_left = 64.0
+margin_top = 88.0
+margin_right = 173.0
+margin_bottom = 123.0
+theme = ExtResource( 6 )
+text = "Parcour"
+
+[node name="ParcourButton" type="CheckButton" parent="Parcour"]
+margin_top = 32.0
+margin_right = 268.0
+margin_bottom = 168.0
+rect_scale = Vector2( 0.4, 0.4 )
+theme = ExtResource( 6 )
+custom_icons/off = ExtResource( 5 )
+custom_icons/on = ExtResource( 4 )
+custom_styles/focus = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Equalizer" type="Label" parent="."]
+margin_left = 64.0
+margin_top = 176.0
+margin_right = 173.0
+margin_bottom = 243.0
+theme = ExtResource( 6 )
+text = "Equalizer"
+
+[node name="EqualizerButton" type="CheckButton" parent="Equalizer"]
+margin_top = 32.0
+margin_right = 268.0
+margin_bottom = 168.0
+rect_scale = Vector2( 0.4, 0.4 )
+theme = ExtResource( 6 )
+custom_icons/off = ExtResource( 5 )
+custom_icons/on = ExtResource( 4 )
+custom_styles/focus = SubResource( 3 )
+
+[node name="ExtendedTransition" type="Label" parent="."]
+margin_left = 64.0
+margin_top = 264.0
+margin_right = 219.0
+margin_bottom = 331.0
+theme = ExtResource( 6 )
+text = "Easy transition"
+
+[node name="ExtendedTransitionButton" type="CheckButton" parent="ExtendedTransition"]
+margin_top = 32.0
+margin_right = 268.0
+margin_bottom = 168.0
+rect_scale = Vector2( 0.4, 0.4 )
+theme = ExtResource( 6 )
+custom_icons/off = ExtResource( 5 )
+custom_icons/on = ExtResource( 4 )
+custom_styles/focus = SubResource( 4 )
+
+[node name="Instructor" type="Label" parent="."]
+margin_left = 64.0
+margin_top = 352.0
+margin_right = 234.0
+margin_bottom = 419.0
+theme = ExtResource( 6 )
+text = "Audio Instructor"
+
+[node name="InstructorButton" type="CheckButton" parent="Instructor"]
+margin_top = 32.0
+margin_right = 268.0
+margin_bottom = 168.0
+rect_scale = Vector2( 0.4, 0.4 )
+theme = ExtResource( 6 )
+custom_icons/off = ExtResource( 5 )
+custom_icons/on = ExtResource( 4 )
+custom_styles/focus = SubResource( 5 )
+
+[node name="Pushup" type="Label" parent="."]
+margin_left = 220.0
+margin_right = 329.0
+margin_bottom = 67.0
+theme = ExtResource( 6 )
+text = "Pushups"
+
+[node name="PushupButton" type="CheckButton" parent="Pushup"]
+margin_top = 32.0
+margin_right = 268.0
+margin_bottom = 168.0
+rect_scale = Vector2( 0.4, 0.4 )
+theme = ExtResource( 6 )
+custom_icons/off = ExtResource( 5 )
+custom_icons/on = ExtResource( 4 )
+custom_styles/focus = SubResource( 6 )
+
+[node name="SafePushups" type="Label" parent="."]
+margin_left = 220.0
+margin_top = 88.0
+margin_right = 361.0
+margin_bottom = 155.0
+theme = ExtResource( 6 )
+text = "Safe Pushups"
+
+[node name="SafePushupsButton" type="CheckButton" parent="SafePushups"]
+margin_top = 32.0
+margin_right = 268.0
+margin_bottom = 168.0
+rect_scale = Vector2( 0.4, 0.4 )
+theme = ExtResource( 6 )
+custom_icons/off = ExtResource( 5 )
+custom_icons/on = ExtResource( 4 )
+custom_styles/focus = SubResource( 7 )
+
+[node name="Burpee" type="Label" parent="."]
+margin_left = 220.0
+margin_top = 176.0
+margin_right = 361.0
+margin_bottom = 243.0
+theme = ExtResource( 6 )
+text = "Burpees"
+
+[node name="BurpeeButton" type="CheckButton" parent="Burpee"]
+margin_top = 32.0
+margin_right = 268.0
+margin_bottom = 168.0
+rect_scale = Vector2( 0.4, 0.4 )
+theme = ExtResource( 6 )
+custom_icons/off = ExtResource( 5 )
+custom_icons/on = ExtResource( 4 )
+custom_styles/focus = SubResource( 8 )
+
+[node name="Stand" type="Label" parent="."]
+margin_left = 370.0
+margin_right = 479.0
+margin_bottom = 67.0
+theme = ExtResource( 6 )
+text = "Standing"
+
+[node name="StandButton" type="CheckButton" parent="Stand"]
+margin_top = 32.0
+margin_right = 268.0
+margin_bottom = 168.0
+rect_scale = Vector2( 0.4, 0.4 )
+theme = ExtResource( 6 )
+custom_icons/off = ExtResource( 5 )
+custom_icons/on = ExtResource( 4 )
+custom_styles/focus = SubResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Squat" type="Label" parent="."]
+margin_left = 520.0
+margin_right = 629.0
+margin_bottom = 67.0
+theme = ExtResource( 6 )
+text = "Squats"
+
+[node name="SquatButton" type="CheckButton" parent="Squat"]
+margin_top = 32.0
+margin_right = 268.0
+margin_bottom = 168.0
+rect_scale = Vector2( 0.4, 0.4 )
+theme = ExtResource( 6 )
+custom_icons/off = ExtResource( 5 )
+custom_icons/on = ExtResource( 4 )
+custom_styles/focus = SubResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Crunches" type="Label" parent="."]
+margin_left = 670.0
+margin_right = 779.0
+margin_bottom = 67.0
+theme = ExtResource( 6 )
+text = "Crunches"
+
+[node name="CrunchesButton" type="CheckButton" parent="Crunches"]
+margin_top = 32.0
+margin_right = 268.0
+margin_bottom = 168.0
+rect_scale = Vector2( 0.4, 0.4 )
+theme = ExtResource( 6 )
+custom_icons/off = ExtResource( 5 )
+custom_icons/on = ExtResource( 4 )
+custom_styles/focus = SubResource( 11 )
+
+[node name="StrengthMode" type="Label" parent="."]
+margin_left = 820.0
+margin_right = 970.0
+margin_bottom = 67.0
+theme = ExtResource( 6 )
+text = "Strength focus"
+
+[node name="StrengthModeButton" type="CheckButton" parent="StrengthMode"]
+margin_top = 32.0
+margin_right = 268.0
+margin_bottom = 168.0
+rect_scale = Vector2( 0.4, 0.4 )
+theme = ExtResource( 6 )
+custom_icons/off = ExtResource( 5 )
+custom_icons/on = ExtResource( 4 )
+custom_styles/focus = SubResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CurvedCues" type="Label" parent="."]
+margin_left = 820.0
+margin_top = 88.0
+margin_right = 979.0
+margin_bottom = 155.0
+theme = ExtResource( 6 )
+text = "Curved cues"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CurvedCuesButton" type="CheckButton" parent="CurvedCues"]
+margin_top = 32.0
+margin_right = 268.0
+margin_bottom = 168.0
+rect_scale = Vector2( 0.4, 0.4 )
+theme = ExtResource( 6 )
+custom_icons/off = ExtResource( 5 )
+custom_icons/on = ExtResource( 4 )
+custom_styles/focus = SubResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Kneesaver" type="Label" parent="."]
+margin_left = 520.0
+margin_top = 88.0
+margin_right = 649.0
+margin_bottom = 155.0
+theme = ExtResource( 6 )
+text = "Easier Squats"
+
+[node name="KneesaverButton" type="CheckButton" parent="Kneesaver"]
+margin_top = 32.0
+margin_right = 268.0
+margin_bottom = 168.0
+rect_scale = Vector2( 0.4, 0.4 )
+theme = ExtResource( 6 )
+custom_icons/off = ExtResource( 5 )
+custom_icons/on = ExtResource( 4 )
+custom_styles/focus = SubResource( 13 )
+
+[node name="Ducking" type="Label" parent="."]
+margin_left = 370.0
+margin_top = 88.0
+margin_right = 479.0
+margin_bottom = 155.0
+theme = ExtResource( 6 )
+text = "Ducking"
+
+[node name="DuckButton" type="CheckButton" parent="Ducking"]
+margin_top = 31.0
+margin_right = 268.0
+margin_bottom = 167.0
+rect_scale = Vector2( 0.4, 0.4 )
+theme = ExtResource( 6 )
+custom_icons/off = ExtResource( 5 )
+custom_icons/on = ExtResource( 4 )
+custom_styles/focus = SubResource( 14 )
+
+[node name="Windmill" type="Label" parent="."]
+margin_left = 370.0
+margin_top = 176.0
+margin_right = 479.0
+margin_bottom = 243.0
+theme = ExtResource( 6 )
+text = "Windmill"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WindmillButton" type="CheckButton" parent="Windmill"]
+margin_top = 32.0
+margin_right = 268.0
+margin_bottom = 168.0
+rect_scale = Vector2( 0.4, 0.4 )
+theme = ExtResource( 6 )
+custom_icons/off = ExtResource( 5 )
+custom_icons/on = ExtResource( 4 )
+custom_styles/focus = SubResource( 15 )
+
+[node name="Jump" type="Label" parent="."]
+margin_left = 370.0
+margin_top = 264.0
+margin_right = 479.0
+margin_bottom = 331.0
+theme = ExtResource( 6 )
+text = "Jumping"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="JumpButton" type="CheckButton" parent="Jump"]
+margin_top = 32.0
+margin_right = 268.0
+margin_bottom = 168.0
+rect_scale = Vector2( 0.4, 0.4 )
+theme = ExtResource( 6 )
+custom_icons/off = ExtResource( 5 )
+custom_icons/on = ExtResource( 4 )
+custom_styles/focus = SubResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprint" type="Label" parent="."]
+margin_left = 370.0
+margin_top = 352.0
+margin_right = 479.0
+margin_bottom = 419.0
+theme = ExtResource( 6 )
+text = "Sprinting"
+
+[node name="SprintButton" type="CheckButton" parent="Sprint"]
+margin_top = 32.0
+margin_right = 268.0
+margin_bottom = 168.0
+rect_scale = Vector2( 0.4, 0.4 )
+theme = ExtResource( 6 )
+custom_icons/off = ExtResource( 5 )
+custom_icons/on = ExtResource( 4 )
+custom_styles/focus = SubResource( 17 )
+
+[node name="ExerciseDuration" type="Label" parent="."]
+margin_left = 555.0
+margin_top = 310.0
+margin_right = 715.0
+margin_bottom = 371.0
+theme = ExtResource( 6 )
+text = "Average exercise
+duration"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NumberEntry" parent="ExerciseDuration" instance=ExtResource( 1 )]
+margin_left = -26.0
+margin_top = 61.0
+margin_right = -26.0
+margin_bottom = 61.0
+min_v = 10
+
+[connection signal="pressed" from="HoldCue/HoldCueButton" to="." method="_on_HoldCueButton_pressed"]
+[connection signal="pressed" from="Parcour/ParcourButton" to="." method="_on_ParcourButton_pressed"]
+[connection signal="pressed" from="Equalizer/EqualizerButton" to="." method="_on_EqualizerButton_pressed"]
+[connection signal="pressed" from="ExtendedTransition/ExtendedTransitionButton" to="." method="_on_ExtendedTransitionButton_pressed"]
+[connection signal="pressed" from="Instructor/InstructorButton" to="." method="_on_InstructorButton_pressed"]
+[connection signal="pressed" from="Pushup/PushupButton" to="." method="_on_PushupButton_pressed"]
+[connection signal="pressed" from="SafePushups/SafePushupsButton" to="." method="_on_SafePushupsButton_pressed"]
+[connection signal="pressed" from="Burpee/BurpeeButton" to="." method="_on_BurpeeButton_pressed"]
+[connection signal="pressed" from="Stand/StandButton" to="." method="_on_StandButton_pressed"]
+[connection signal="pressed" from="Squat/SquatButton" to="." method="_on_SquatButton_pressed"]
+[connection signal="pressed" from="Crunches/CrunchesButton" to="." method="_on_CrunchesButton_pressed"]
+[connection signal="pressed" from="StrengthMode/StrengthModeButton" to="." method="_on_StrengthModeButton_pressed"]
+[connection signal="pressed" from="CurvedCues/CurvedCuesButton" to="." method="_on_CurvedCuesButton_pressed"]
+[connection signal="pressed" from="Kneesaver/KneesaverButton" to="." method="_on_KneesaverButton_pressed"]
+[connection signal="pressed" from="Ducking/DuckButton" to="." method="_on_DuckingButton_pressed"]
+[connection signal="pressed" from="Windmill/WindmillButton" to="." method="_on_WindmillButton_pressed"]
+[connection signal="pressed" from="Jump/JumpButton" to="." method="_on_JumpButton_pressed"]
+[connection signal="pressed" from="Sprint/SprintButton" to="." method="_onSprintButton_pressed"]
+[connection signal="value_changed" from="ExerciseDuration/NumberEntry" to="." method="_on_ExerciseDuration_value_changed"]

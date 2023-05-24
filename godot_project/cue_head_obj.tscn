@@ -1,0 +1,163 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://models/head_model.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://cue_head_obj.gd" type="Script" id=2]
+[ext_resource path="res://models/Berzerker.material" type="Material" id=3]
+[ext_resource path="res://TargetTimer.tscn" type="PackedScene" id=4]
+[ext_resource path="res://models/blue_transparent.material" type="Material" id=5]
+[ext_resource path="res://models/super_white.material" type="Material" id=6]
+[ext_resource path="res://models/green_material.tres" type="Material" id=7]
+[ext_resource path="res://scenes/Star.tscn" type="PackedScene" id=8]
+
+[sub_resource type="Animation" id=1]
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 90, 0, 0 ), Vector3( 0, 160, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0.8, 0.5, 0.4 ), Vector3( 0.1, 0.1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, true, false ]
+}
+
+[sub_resource type="Animation" id=2]
+
+[sub_resource type="PrismMesh" id=3]
+size = Vector3( 1, 2, 1 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 0.8, 0.48, 0.089 )
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 0.8, 0.48, 3.77057 )
+
+[sub_resource type="CylinderMesh" id=6]
+
+[sub_resource type="CubeMesh" id=7]
+material = ExtResource( 5 )
+size = Vector3( 0.1, 0.1, 0.1 )
+
+[sub_resource type="SpatialMaterial" id=8]
+params_depth_draw_mode = 1
+albedo_color = Color( 0.690196, 0, 0, 1 )
+
+[sub_resource type="CubeMesh" id=9]
+material = SubResource( 8 )
+size = Vector3( 0.1, 0.1, 0.1 )
+
+[node name="StaticBody" type="StaticBody"]
+transform = Transform( 0.1, 0, 0, 0, 0.15, 0, 0, 0, 0.3, 0, 0, 0 )
+script = ExtResource( 2 )
+
+[node name="head_cue" type="MeshInstance" parent="."]
+transform = Transform( 0.8, 0, 0, 0, -2.18557e-08, -0.4, 0, 0.5, -1.74846e-08, 0, 0, 0 )
+mesh = ExtResource( 1 )
+material/0 = ExtResource( 6 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="head_cue"]
+anims/explode = SubResource( 1 )
+anims/idle = SubResource( 2 )
+
+[node name="TargetTimer" parent="head_cue" instance=ExtResource( 4 )]
+transform = Transform( 6.25, 0, 0, 0, -4.37114e-07, 10, 0, -12.5, -5.46392e-07, 0, 0, 0 )
+
+[node name="Spikes" type="MeshInstance" parent="head_cue"]
+transform = Transform( 0.2, 0, 0, 0, -4.37114e-08, -0.1, 0, 1, -4.37114e-09, 0, 8.99124e-08, 2.57119 )
+mesh = SubResource( 3 )
+material/0 = ExtResource( 5 )
+__meta__ = {
+"_editor_description_": "WQW"
+}
+
+[node name="SpikeRight" type="MeshInstance" parent="head_cue/Spikes"]
+transform = Transform( 0.618734, 1.20188, -2.16598e-08, -0.119516, 0.676958, 1.47095e-08, 9.40358e-08, 4.66543e-08, 0.75, 3.84254, -0.27925, 2.19717e-07 )
+mesh = SubResource( 3 )
+material/0 = ExtResource( 7 )
+__meta__ = {
+"_editor_description_": "WQW"
+}
+
+[node name="SpikeLeft" type="MeshInstance" parent="head_cue/Spikes"]
+transform = Transform( 0.731341, -1.29245, -3.50004e-08, 0.0589333, 0.664986, 7.2203e-09, -4.63691e-08, 5.60742e-08, 0.75, -3.7908, -0.278175, 2.18872e-07 )
+mesh = SubResource( 3 )
+material/0 = ExtResource( 3 )
+__meta__ = {
+"_editor_description_": "WQW"
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1.01034, 0.000906242, 0.00129629, -0.000902207, 1.0155, 0.000442253, -0.0012959, -0.000445667, 1.01034, 0, -0.0136241, 0 )
+shape = SubResource( 4 )
+
+[node name="CollisionShapeExtended" type="CollisionShape" parent="."]
+transform = Transform( 1.01034, 0.000906242, 0.00129629, -0.000902207, 1.0155, 0.000442253, -0.0012959, -0.000445667, 1.01034, 0, -0.0136241, -0.0181158 )
+shape = SubResource( 5 )
+disabled = true
+
+[node name="MeshInstance" type="MeshInstance" parent="CollisionShapeExtended"]
+transform = Transform( 0.553016, -0.00238044, -2.09735e-07, 3.11815e-07, -0.000810662, -0.368677, -0.000714132, 3.69928, 0.000163609, 8.66968e-06, 2.95136e-06, -0.00675797 )
+mesh = SubResource( 6 )
+material/0 = ExtResource( 5 )
+
+[node name="sprinkle" type="CPUParticles" parent="."]
+emitting = false
+amount = 16
+mesh = SubResource( 7 )
+direction = Vector3( 0, 0, -1 )
+spread = 180.0
+flatness = 0.5
+gravity = Vector3( 0, -1, 0 )
+initial_velocity = 1.0
+
+[node name="sprinkle_opponent" type="CPUParticles" parent="."]
+emitting = false
+amount = 16
+one_shot = true
+mesh = SubResource( 9 )
+direction = Vector3( 0, 0, -1 )
+spread = 180.0
+flatness = 0.5
+gravity = Vector3( 0, -1, 0 )
+initial_velocity = 1.0
+
+[node name="Stars" type="Spatial" parent="."]
+visible = false
+
+[node name="star1" parent="Stars" instance=ExtResource( 8 )]
+transform = Transform( 0.5, 0, 0, 0, -8.14603e-08, -0.35, 0, 0.5, -5.70222e-08, 1.4331, 0, 0 )
+
+[node name="star2" parent="Stars" instance=ExtResource( 8 )]
+transform = Transform( 0.5, 0, 0, 0, -8.14603e-08, -0.35, 0, 0.5, -5.70222e-08, -1.43, 0, 0 )
+
+[node name="star3" parent="Stars" instance=ExtResource( 8 )]
+transform = Transform( 0.5, 0, 0, 0, -8.14603e-08, -0.35, 0, 0.5, -5.70222e-08, 0, 1.02576, 0 )
+
+[connection signal="animation_finished" from="head_cue/AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

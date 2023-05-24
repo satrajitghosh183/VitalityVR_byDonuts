@@ -1,0 +1,337 @@
+[gd_scene load_steps=42 format=2]
+
+[ext_resource path="res://fonts/droid-sans/DroidSans.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://BlackTheme.theme" type="Theme" id=2]
+[ext_resource path="res://scenes/GameSelectionPanel.tscn" type="PackedScene" id=3]
+[ext_resource path="res://BPM.gd" type="Script" id=4]
+[ext_resource path="res://scripts/Levelselect.gd" type="Script" id=6]
+[ext_resource path="res://models/super_white.material" type="Material" id=7]
+[ext_resource path="res://scenes/level_platform.tscn" type="PackedScene" id=8]
+[ext_resource path="res://InfoBox.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/ImagePanel.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/Keyboard.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scenes/MultiPanelGUI.tscn" type="PackedScene" id=13]
+[ext_resource path="res://ToggleSwitch.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scenes/VRHealthConnection.tscn" type="PackedScene" id=16]
+[ext_resource path="res://TextPanel.tscn" type="PackedScene" id=18]
+[ext_resource path="res://assets/enemy_medium.jpg" type="Texture" id=19]
+[ext_resource path="res://audio/snare_hit.wav" type="AudioStream" id=20]
+[ext_resource path="res://scenes/PortalInfoSwitch.tscn" type="PackedScene" id=21]
+[ext_resource path="res://SongSelector.tscn" type="PackedScene" id=23]
+[ext_resource path="res://scenes/Button.tscn" type="PackedScene" id=24]
+[ext_resource path="res://scenes/PlayerHeightAdjuster.tscn" type="PackedScene" id=26]
+[ext_resource path="res://scenes/VRWorkoutConnection.tscn" type="PackedScene" id=28]
+[ext_resource path="res://fonts/Droid_Sans_Regular.tres" type="DynamicFont" id=30]
+[ext_resource path="res://assets/enemy_easy.jpg" type="Texture" id=32]
+[ext_resource path="res://assets/enemy_hard.jpg" type="Texture" id=33]
+[ext_resource path="res://assets/enemy_none.jpg" type="Texture" id=34]
+[ext_resource path="res://audio/menu_bg_music.ogg" type="AudioStream" id=35]
+[ext_resource path="res://scenes/SideQuestConnection.tscn" type="PackedScene" id=37]
+[ext_resource path="res://scenes/SideQuestPanel.tscn" type="PackedScene" id=38]
+[ext_resource path="res://scenes/AchievementDisplay.tscn" type="PackedScene" id=39]
+[ext_resource path="res://scenes/EnvironmentSelectionPanel.tscn" type="PackedScene" id=43]
+
+[sub_resource type="CylinderShape" id=1]
+radius = 0.2
+height = 0.2
+
+[sub_resource type="CylinderMesh" id=2]
+top_radius = 0.2
+bottom_radius = 0.2
+height = 0.1
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 0.0823529, 0, 0.654902, 1 )
+metallic_specular = 0.0
+
+[sub_resource type="GDScript" id=4]
+script/source = "extends Spatial
+
+export(String) var text = \"default\"
+
+var textnode
+export(int) var font_size = 32
+export(int) var viewport_width = 256
+export(int) var viewport_height = 64
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+var viewport
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	viewport = get_node(\"Viewport\")	
+
+	textnode = viewport.get_node(\"CanvasLayer/Panel/Container/Label\")
+	viewport.get_node(\"CanvasLayer/Panel\").rect_size = Vector2(viewport_width/0.8,viewport_height/0.8)
+	
+	var textmesh = get_node(\"MeshInstance\")
+
+	var font = textnode.get(\"custom_fonts/font\")
+
+
+	if font.size != font_size:
+		#Make a local copy of the texture
+		print (\"Font needs copying\")
+		#Custom size needs a local copy of the font
+		var font_copy = font.duplicate(true)
+		textnode.set(\"custom_fonts/font\", font_copy)
+		font_copy.size = font_size
+		
+	textmesh.set_surface_material(0,textmesh.get_surface_material(0).duplicate())
+		
+	textmesh.mesh.size = Vector2(2, 2*float(viewport_height)/float(viewport_width))
+	
+	print_info(text)
+
+func print_info(t):
+	text = t.replace(\"\\\\n\",\"\\n\")
+	textnode.text = text
+	viewport.render_target_update_mode = Viewport.UPDATE_ONCE
+
+
+"
+
+[sub_resource type="Theme" id=5]
+default_font = ExtResource( 30 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 32
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="PlaneMesh" id=8]
+size = Vector2( 2, 0.5 )
+
+[sub_resource type="ViewportTexture" id=9]
+viewport_path = NodePath("SettingsCarousel/Battle/Header/Viewport")
+
+[sub_resource type="SpatialMaterial" id=10]
+resource_local_to_scene = true
+flags_unshaded = true
+albedo_texture = SubResource( 9 )
+
+[sub_resource type="PrismMesh" id=11]
+size = Vector3( 0.03, 0.03, 0.03 )
+
+[node name="Spatial" type="Spatial"]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0, 0, 1.6 )
+script = ExtResource( 6 )
+
+[node name="Recenter" parent="." instance=ExtResource( 24 )]
+transform = Transform( -1.62921e-07, 1, 4.37114e-08, -1.1921e-07, -4.37114e-08, 1, 1, 1.62921e-07, 1.1921e-07, 0, 0.135846, 0 )
+ontext = "Recenter"
+
+[node name="platform" parent="." instance=ExtResource( 8 )]
+transform = Transform( 0.913545, 0, 0.406737, 0, 1, 0, -0.406737, 0, 0.913545, 0, -0.34, 0 )
+
+[node name="BPM" type="StaticBody" parent="."]
+transform = Transform( 0.0149038, 0.397376, -0.917535, -6.47481e-08, 0.917637, 0.39742, 0.99989, -0.00592356, 0.0136778, -1.58985, 1.19237, 0.551304 )
+script = ExtResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="BPM"]
+transform = Transform( 1, 7.45058e-08, -5.96046e-08, 2.98023e-08, 1, -2.98023e-08, -1.78814e-07, -1.49012e-08, 1, -1.19209e-07, -0.050589, -2.38419e-07 )
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="BPM"]
+mesh = SubResource( 2 )
+material/0 = SubResource( 3 )
+
+[node name="bpm_text" parent="BPM" instance=ExtResource( 9 )]
+transform = Transform( -0.198599, -0.00948017, -0.0216437, -0.00939057, 0.199775, -0.0013372, 0.0216827, -0.000311606, -0.198821, -0.0667288, 0.0478439, -0.0206856 )
+default_text = "Hit to set bpm\\nfor Freeplay mode"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="BPM"]
+stream = ExtResource( 20 )
+bus = "Voice"
+
+[node name="OverrideBeats" parent="BPM" instance=ExtResource( 15 )]
+transform = Transform( -0.982105, 0.0147357, -0.187757, -0.0600452, 0.92041, 0.386317, 0.178506, 0.390677, -0.903054, -0.0119992, 0.27563, 0.160782 )
+ontext = "Override beats"
+offtext = "Default beats"
+
+[node name="SongSelector" parent="." instance=ExtResource( 23 )]
+transform = Transform( -1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 1, 1.433, -0.393 )
+
+[node name="SettingsCarousel" type="Spatial" parent="."]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -2.3 )
+
+[node name="Tween" type="Tween" parent="SettingsCarousel"]
+
+[node name="Connections" type="Spatial" parent="SettingsCarousel"]
+
+[node name="SideQuestConnection" parent="SettingsCarousel/Connections" instance=ExtResource( 37 )]
+transform = Transform( -0.212132, 0.212132, -3.45607e-08, 0, -4.88762e-08, -0.3, -0.212132, -0.212132, 3.45607e-08, 1.597, 1.791, 1.215 )
+
+[node name="VRHealthConnection" parent="SettingsCarousel/Connections" instance=ExtResource( 16 )]
+transform = Transform( -4.88762e-08, 0.3, -1.31134e-08, 0, -1.31134e-08, -0.3, -0.3, -4.88762e-08, 2.13645e-15, 1.259, 1.791, 0.632973 )
+
+[node name="VRWorkoutConnection" parent="SettingsCarousel/Connections" instance=ExtResource( 28 )]
+transform = Transform( -4.88762e-08, 0.3, -1.31134e-08, 0, -1.31134e-08, -0.3, -0.3, -4.88762e-08, 2.13645e-15, 1.259, 1.791, -0.0649483 )
+
+[node name="PortalInfo" parent="SettingsCarousel/Connections/VRWorkoutConnection" instance=ExtResource( 21 )]
+transform = Transform( 1, -1.13687e-13, 8.47033e-21, 1.13687e-13, 1, 7.4607e-14, -8.47033e-22, -7.4607e-14, 1, -2.29867, 0.0214403, 1.68262 )
+
+[node name="Exercises" type="Spatial" parent="SettingsCarousel"]
+transform = Transform( 1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -1.19209e-07, 0, -0.225055 )
+
+[node name="GamePanel" parent="SettingsCarousel/Exercises" instance=ExtResource( 3 )]
+transform = Transform( -9.77524e-08, -1, 2.62268e-08, 0, -4.37114e-08, -0.6, 0.6, -1.62921e-07, 4.27289e-15, -1, 1.474, -0.148 )
+
+[node name="EnvironmentSelectionPanel" parent="SettingsCarousel/Exercises" instance=ExtResource( 43 )]
+transform = Transform( -8.02679e-08, -1, 8.74228e-09, 0, -4.37114e-08, -0.2, 0.2, -4.01339e-07, 3.50862e-15, -1, 1.0238, 0.152352 )
+
+[node name="Battle" type="Spatial" parent="SettingsCarousel"]
+
+[node name="Header" type="Spatial" parent="SettingsCarousel/Battle"]
+transform = Transform( 3.26639e-07, -1, 3.72904e-14, 9.77524e-08, 2.65431e-14, -0.6, 0.6, 5.44398e-07, 9.77524e-08, -1.18034, 2.33154, -0.250625 )
+visible = false
+script = SubResource( 4 )
+text = "Save: Play any workout, afterwards press save\\nLoad: Select a slot and then the songs\\nChallenges: Play any workout then press 'Create Challenge'\\nChallenge is uploaded and can be shared with a link"
+font_size = 16
+viewport_width = 512
+viewport_height = 96
+
+[node name="Viewport" type="Viewport" parent="SettingsCarousel/Battle/Header"]
+size = Vector2( 512, 96 )
+msaa = 6
+disable_3d = true
+usage = 0
+render_target_v_flip = true
+render_target_update_mode = 0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="SettingsCarousel/Battle/Header/Viewport"]
+
+[node name="Panel" type="Panel" parent="SettingsCarousel/Battle/Header/Viewport/CanvasLayer"]
+margin_right = 256.0
+margin_bottom = 48.0
+theme = SubResource( 5 )
+custom_styles/panel = SubResource( 6 )
+
+[node name="Container" type="MarginContainer" parent="SettingsCarousel/Battle/Header/Viewport/CanvasLayer/Panel"]
+margin_right = 256.0
+margin_bottom = 48.0
+theme = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="SettingsCarousel/Battle/Header/Viewport/CanvasLayer/Panel/Container"]
+margin_top = 1.0
+margin_right = 256.0
+margin_bottom = 47.0
+custom_fonts/font = SubResource( 7 )
+text = "defaulttext"
+
+[node name="MeshInstance" type="MeshInstance" parent="SettingsCarousel/Battle/Header"]
+mesh = SubResource( 8 )
+material/0 = SubResource( 10 )
+
+[node name="text_panel" parent="SettingsCarousel/Battle/Header" instance=ExtResource( 18 )]
+transform = Transform( 1.1, -1.13687e-13, 6.88809e-21, -5.68434e-14, 1, 0, 1.42109e-14, -6.77626e-21, 0.25, 0, -0.00774515, 0 )
+
+[node name="WorkoutMarker" type="Spatial" parent="SettingsCarousel/Battle"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.38419e-07, 0, 0 )
+visible = false
+
+[node name="MeshInstance" type="MeshInstance" parent="SettingsCarousel/Battle/WorkoutMarker"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0872474, 0 )
+mesh = SubResource( 11 )
+material/0 = ExtResource( 7 )
+
+[node name="CreateChallengeButton" parent="SettingsCarousel/Battle" instance=ExtResource( 24 )]
+transform = Transform( -3.49691e-08, 0, -0.8, 0, 0.8, 0, 0.8, 0, -3.49691e-08, -1.26531, 1.37788, -0.6494 )
+visible = false
+font_size = 20
+ontext = "Create\\nChallenge"
+
+[node name="Opponents" type="Spatial" parent="SettingsCarousel/Battle"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.257761, 0 )
+
+[node name="NoEnemy" parent="SettingsCarousel/Battle/Opponents" instance=ExtResource( 10 )]
+transform = Transform( -2.8213e-08, -1, 4.37114e-09, 0, -4.37114e-08, -0.1, 0.1, -2.8213e-07, 1.23323e-15, -1.23036, 1.34471, -0.337731 )
+image = ExtResource( 34 )
+active_marker = "WorkoutMarker"
+
+[node name="EasyEnemy" parent="SettingsCarousel/Battle/Opponents" instance=ExtResource( 10 )]
+transform = Transform( -2.8213e-08, -1, 4.37114e-09, 0, -4.37114e-08, -0.1, 0.1, -2.8213e-07, 1.23323e-15, -1.23036, 1.34471, -0.101524 )
+image = ExtResource( 32 )
+active_marker = "WorkoutMarker"
+
+[node name="MediumEnemy" parent="SettingsCarousel/Battle/Opponents" instance=ExtResource( 10 )]
+transform = Transform( -2.8213e-08, -1, 4.37114e-09, 0, -4.37114e-08, -0.1, 0.1, -2.8213e-07, 1.23323e-15, -1.23036, 1.34471, 0.136019 )
+image = ExtResource( 19 )
+active_marker = "WorkoutMarker"
+
+[node name="HardEnemy" parent="SettingsCarousel/Battle/Opponents" instance=ExtResource( 10 )]
+transform = Transform( -2.8213e-08, -1, 4.37114e-09, 0, -4.37114e-08, -0.1, 0.1, -2.8213e-07, 1.23323e-15, -1.23036, 1.34471, 0.367736 )
+image = ExtResource( 33 )
+active_marker = "WorkoutMarker"
+
+[node name="WorkoutMarker" type="Spatial" parent="SettingsCarousel/Battle/Opponents"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.38419e-07, 0, 0 )
+visible = false
+
+[node name="MeshInstance" type="MeshInstance" parent="SettingsCarousel/Battle/Opponents/WorkoutMarker"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0872474, 0 )
+mesh = SubResource( 11 )
+material/0 = ExtResource( 7 )
+
+[node name="ExerciseButton" parent="." instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.618245, 0.925931, -1 )
+ontext = "Exercises"
+
+[node name="ConnectionsButton" parent="." instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399424, 0.925931, -1 )
+ontext = "Connect"
+
+[node name="BattleButton" parent="." instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399, 1.05413, -1 )
+ontext = "Battle"
+
+[node name="PlayerHeightAdjuster" parent="." instance=ExtResource( 26 )]
+transform = Transform( -0.0685351, 0, -0.0304622, 0, 0.075, 0, 0.0304622, 0, -0.0685351, 0.696602, 0, 1.12372 )
+
+[node name="TrackerRecorderButton" parent="." instance=ExtResource( 24 )]
+transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -0.369874, 0.0648079, 0.921215 )
+visible = false
+ontext = "Record tracker"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 35 )
+volume_db = -9.0
+
+[node name="SideQuestPanel" parent="." instance=ExtResource( 38 )]
+transform = Transform( 2.84861e-14, 1, -1.62921e-07, -1, 1.91069e-15, -2.06632e-07, -2.06632e-07, 1.62921e-07, 1, -3.31028, 1.9648, 0.0695851 )
+
+[node name="MultiPanel" parent="." instance=ExtResource( 13 )]
+transform = Transform( -0.6, -2.38498e-08, 6.25503e-16, 0, -4.37114e-08, -0.6, 1.43098e-08, -1, 2.62268e-08, -0.145, 1.474, 1 )
+
+[node name="Keyboard" parent="." instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.318969, 0 )
+
+[node name="AchievementDisplay" parent="." instance=ExtResource( 39 )]
+transform = Transform( 4.88762e-07, -1, -1.62921e-07, -5.48627e-14, 1.62921e-07, -1, 1, 4.88762e-07, 2.63211e-14, 2.17868, 3.39764, -1.07779 )
+row_elements = 5
+
+[connection signal="selected" from="Recenter" to="." method="_on_Recenter_selected"]
+[connection signal="toggled" from="BPM/OverrideBeats" to="." method="_on_OverrideBeats_toggled"]
+[connection signal="level_selected" from="SongSelector" to="." method="_on_SongSelector_level_selected"]
+[connection signal="toggled" from="SettingsCarousel/Connections/VRWorkoutConnection/PortalInfo" to="." method="_on_PortalSwitch_toggled"]
+[connection signal="challenge_selected" from="SettingsCarousel/Exercises/GamePanel" to="." method="_on_StoredSlot_selected"]
+[connection signal="exercise_set_selected" from="SettingsCarousel/Exercises/GamePanel" to="." method="_on_ExerciseCollection_selected"]
+[connection signal="onboarding_selected" from="SettingsCarousel/Exercises/GamePanel" to="." method="_on_GamePanel_onboarding_selected"]
+[connection signal="workout_selected" from="SettingsCarousel/Exercises/GamePanel" to="." method="_on_PresetCollector_selected"]
+[connection signal="selected" from="SettingsCarousel/Battle/CreateChallengeButton" to="." method="_on_CreateChallengeButton_selected"]
+[connection signal="selected" from="SettingsCarousel/Battle/Opponents/NoEnemy" to="." method="_on_BattleMode_selected" binds= [ "blue", "none" ]]
+[connection signal="selected" from="SettingsCarousel/Battle/Opponents/EasyEnemy" to="." method="_on_BattleMode_selected" binds= [ "blue", "easy" ]]
+[connection signal="selected" from="SettingsCarousel/Battle/Opponents/MediumEnemy" to="." method="_on_BattleMode_selected" binds= [ "blue", "medium" ]]
+[connection signal="selected" from="SettingsCarousel/Battle/Opponents/HardEnemy" to="." method="_on_BattleMode_selected" binds= [ "blue", "hard" ]]
+[connection signal="selected" from="ExerciseButton" to="." method="_on_ExerciseButton_selected"]
+[connection signal="selected" from="ConnectionsButton" to="." method="_on_ConnectionsButton_selected"]
+[connection signal="selected" from="BattleButton" to="." method="_on_BattleButton_selected"]
+[connection signal="selected" from="TrackerRecorderButton" to="." method="_on_TrackerRecorderButton_selected"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]

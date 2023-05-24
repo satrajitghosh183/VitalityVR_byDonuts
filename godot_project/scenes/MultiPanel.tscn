@@ -1,0 +1,100 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://themes/vrworkout_theme.theme" type="Theme" id=1]
+[ext_resource path="res://scenes/WelcomePanel.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/StatisticsPanel.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scripts/MultiPanel.gd" type="Script" id=5]
+[ext_resource path="res://scenes/ConnectPad.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/ExperimentalFeatures.tscn" type="PackedScene" id=7]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 0 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.380392, 0.298039, 0.831373, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="MultiPanel" type="Control"]
+margin_right = 1024.0
+margin_bottom = 512.0
+theme = ExtResource( 1 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TabContainer" type="TabContainer" parent="."]
+margin_right = 1024.0
+margin_bottom = 512.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="News" type="Tabs" parent="TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 39.0
+margin_right = -5.0
+margin_bottom = -5.0
+
+[node name="WelcomePanel" parent="TabContainer/News" instance=ExtResource( 2 )]
+server_url = "https://portal.vrworkout.at/fast/welcome.msg"
+
+[node name="Multiplayer" type="Tabs" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 39.0
+margin_right = -5.0
+margin_bottom = -5.0
+
+[node name="ConnectPad" parent="TabContainer/Multiplayer" instance=ExtResource( 6 )]
+margin_left = 212.868
+margin_top = 48.7035
+margin_right = 212.868
+margin_bottom = 48.7035
+rect_scale = Vector2( 0.75, 0.75 )
+
+[node name="Statistics" type="Tabs" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 39.0
+margin_right = -5.0
+margin_bottom = -5.0
+
+[node name="StatisticsPanel" parent="TabContainer/Statistics" instance=ExtResource( 3 )]
+
+[node name="Experimental" type="Tabs" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 39.0
+margin_right = -5.0
+margin_bottom = -5.0
+
+[node name="ExperimentalFeatures" parent="TabContainer/Experimental" instance=ExtResource( 7 )]
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 5.0
+margin_top = 38.0
+margin_right = 1019.0
+margin_bottom = 508.0
+mouse_filter = 2
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="content_changed" from="TabContainer/News/WelcomePanel" to="." method="_on_content_changed"]
+[connection signal="content_changed" from="TabContainer/Multiplayer/ConnectPad" to="." method="_on_content_changed"]
+[connection signal="activate_feature" from="TabContainer/Experimental/ExperimentalFeatures" to="." method="_on_activate_feature"]

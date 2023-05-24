@@ -1,0 +1,120 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://models/heart_coin.gltf" type="PackedScene" id=1]
+[ext_resource path="res://Heart_Coin.gd" type="Script" id=2]
+[ext_resource path="res://neon_blue.tres" type="Material" id=3]
+[ext_resource path="res://fonts/droid-sans/DroidSans-Bold.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="SpatialMaterial" id=1]
+flags_unshaded = true
+
+[sub_resource type="Animation" id=2]
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Text:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 1, 1, 1 ), Vector3( 0.8, 1, 0.8 ), Vector3( 1.1, 1, 1.1 ) ]
+}
+
+[sub_resource type="SpatialMaterial" id=3]
+flags_unshaded = true
+albedo_color = Color( 0.835294, 0.905882, 0, 1 )
+
+[sub_resource type="PrismMesh" id=4]
+size = Vector3( 0.2, 0.2, 0.2 )
+
+[sub_resource type="SpatialMaterial" id=5]
+flags_unshaded = true
+albedo_color = Color( 0.254902, 0, 0.705882, 1 )
+
+[sub_resource type="SpatialMaterial" id=6]
+flags_unshaded = true
+albedo_color = Color( 0.0392157, 0.74902, 0, 1 )
+
+[sub_resource type="SpatialMaterial" id=7]
+flags_unshaded = true
+albedo_color = Color( 0.596078, 0.207843, 0.207843, 1 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 92
+font_data = ExtResource( 4 )
+
+[sub_resource type="PlaneMesh" id=9]
+size = Vector2( 0.5, 0.5 )
+
+[sub_resource type="ViewportTexture" id=10]
+viewport_path = NodePath("Viewport")
+
+[sub_resource type="SpatialMaterial" id=11]
+resource_local_to_scene = true
+flags_transparent = true
+flags_unshaded = true
+albedo_texture = SubResource( 10 )
+
+[node name="heart_coin" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="Text" parent="." index="0"]
+material/0 = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
+anims/beat = SubResource( 2 )
+
+[node name="Circle" parent="." index="2"]
+material/0 = ExtResource( 3 )
+material/1 = SubResource( 3 )
+
+[node name="actual" type="Spatial" parent="Circle" index="0"]
+
+[node name="MeshInstance" type="MeshInstance" parent="Circle/actual" index="0"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -3.06809e-09, -0.940703 )
+mesh = SubResource( 4 )
+material/0 = SubResource( 5 )
+
+[node name="low" type="Spatial" parent="Circle" index="1"]
+
+[node name="MeshInstance" type="MeshInstance" parent="Circle/low" index="0"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -3.06809e-09, -0.940703 )
+mesh = SubResource( 4 )
+material/0 = SubResource( 6 )
+
+[node name="high" type="Spatial" parent="Circle" index="2"]
+
+[node name="MeshInstance" type="MeshInstance" parent="Circle/high" index="0"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -3.06809e-09, -0.940703 )
+mesh = SubResource( 4 )
+material/0 = SubResource( 7 )
+
+[node name="Viewport" type="Viewport" parent="." index="3"]
+size = Vector2( 256, 256 )
+transparent_bg = true
+msaa = 6
+render_target_v_flip = true
+render_target_update_mode = 3
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Viewport" index="0"]
+offset = Vector2( 50, 50 )
+scale = Vector2( 1.2, 1.2 )
+transform = Transform2D( 1.2, 0, 0, 1.2, 50, 50 )
+
+[node name="CenterContainer" type="CenterContainer" parent="Viewport/CanvasLayer" index="0"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Label" type="Label" parent="Viewport/CanvasLayer/CenterContainer" index="0"]
+margin_right = 102.0
+margin_bottom = 108.0
+custom_fonts/font = SubResource( 8 )
+text = "60"
+
+[node name="HR" type="MeshInstance" parent="." index="4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.018057, 0.0154107, 0.255465 )
+mesh = SubResource( 9 )
+material/0 = SubResource( 11 )

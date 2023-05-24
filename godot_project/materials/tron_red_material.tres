@@ -1,0 +1,15 @@
+[gd_resource type="SpatialMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://models/material_0_baseColor_baked.png" type="Texture" id=1]
+
+[resource]
+resource_name = "material_0"
+flags_unshaded = true
+params_cull_mode = 2
+albedo_color = Color( 0.878431, 0, 0, 1 )
+albedo_texture = ExtResource( 1 )
+detail_enabled = true
+detail_mask = ExtResource( 1 )
+detail_blend_mode = 1
+detail_uv_layer = 0
+detail_albedo = ExtResource( 1 )

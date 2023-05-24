@@ -1,0 +1,65 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scenes/MainSelector.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scripts/ConnectPadInput.gd" type="Script" id=2]
+[ext_resource path="res://scripts/TouchableViewport.gd" type="Script" id=3]
+[ext_resource path="res://scripts/GameSelectionPanel.gd" type="Script" id=4]
+
+[sub_resource type="PlaneMesh" id=1]
+size = Vector2( 2, 1 )
+
+[sub_resource type="ViewportTexture" id=2]
+flags = 4
+viewport_path = NodePath("Viewport")
+
+[sub_resource type="SpatialMaterial" id=3]
+resource_local_to_scene = true
+flags_transparent = true
+flags_unshaded = true
+albedo_texture = SubResource( 2 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 1, 0.01, 0.5 )
+
+[node name="Spatial" type="Spatial"]
+script = ExtResource( 4 )
+
+[node name="Viewport" type="Viewport" parent="."]
+size = Vector2( 1024, 512 )
+transparent_bg = true
+msaa = 6
+render_target_v_flip = true
+script = ExtResource( 3 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Viewport"]
+
+[node name="main" parent="Viewport/CanvasLayer" instance=ExtResource( 1 )]
+margin_bottom = 0.0
+
+[node name="StaticBody" type="StaticBody" parent="."]
+script = ExtResource( 2 )
+
+[node name="MeshInstance" type="MeshInstance" parent="StaticBody"]
+mesh = SubResource( 1 )
+material/0 = SubResource( 3 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00958329, 0 )
+shape = SubResource( 4 )
+
+[node name="tl_marker" type="Spatial" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -0.5 )
+
+[node name="bl_marker" type="Spatial" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0.5 )
+
+[node name="tr_marker" type="Spatial" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -0.5 )
+
+[connection signal="challenge_selected" from="Viewport/CanvasLayer/main" to="." method="_on_main_challenge_selected"]
+[connection signal="content_changed" from="Viewport/CanvasLayer/main" to="Viewport" method="_on_content_changed"]
+[connection signal="exercise_set_selected" from="Viewport/CanvasLayer/main" to="." method="_on_main_exercise_set_selected"]
+[connection signal="onboarding_selected" from="Viewport/CanvasLayer/main" to="." method="_on_main_onboarding_selected"]
+[connection signal="workout_selected" from="Viewport/CanvasLayer/main" to="." method="_on_main_workout_selected"]
+[connection signal="interface_release" from="StaticBody" to="Viewport" method="_on_ConnectPadInput_interface_release"]
+[connection signal="interface_touch" from="StaticBody" to="Viewport" method="_on_ConnectPadInput_interface_touch"]

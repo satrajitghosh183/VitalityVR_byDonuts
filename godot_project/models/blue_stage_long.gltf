@@ -1,0 +1,336 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.3.48",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0,
+                1,
+                2,
+                3
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "Grid",
+            "translation" : [
+                0,
+                -0.07276655733585358,
+                0.12137012183666229
+            ]
+        },
+        {
+            "mesh" : 1,
+            "name" : "Grid.001"
+        },
+        {
+            "mesh" : 2,
+            "name" : "Grid.002"
+        },
+        {
+            "mesh" : 3,
+            "name" : "Grid.003"
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "name" : "Material.001",
+            "pbrMetallicRoughness" : {}
+        },
+        {
+            "doubleSided" : true,
+            "name" : "blue_state_tex",
+            "pbrMetallicRoughness" : {}
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Grid.001",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3,
+                    "material" : 0
+                }
+            ]
+        },
+        {
+            "name" : "Grid.003",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 4,
+                        "NORMAL" : 5,
+                        "TEXCOORD_0" : 6
+                    },
+                    "indices" : 7
+                }
+            ]
+        },
+        {
+            "name" : "Grid.004",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 8,
+                        "NORMAL" : 9,
+                        "TEXCOORD_0" : 10
+                    },
+                    "indices" : 11,
+                    "material" : 1
+                }
+            ]
+        },
+        {
+            "name" : "Grid.002",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 12,
+                        "NORMAL" : 13,
+                        "TEXCOORD_0" : 14
+                    },
+                    "indices" : 15,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 630,
+            "max" : [
+                1,
+                0.513286828994751,
+                -1.4302525520324707
+            ],
+            "min" : [
+                -1,
+                0.0037772017531096935,
+                -6.902522087097168
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 630,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 630,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 1428,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5126,
+            "count" : 15014,
+            "max" : [
+                1.0007967948913574,
+                0.5143343210220337,
+                2.5506296157836914
+            ],
+            "min" : [
+                -1.0007967948913574,
+                -0.0013348617358133197,
+                -1.0581932067871094
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 5,
+            "componentType" : 5126,
+            "count" : 15014,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 6,
+            "componentType" : 5126,
+            "count" : 15014,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 7,
+            "componentType" : 5123,
+            "count" : 22560,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 8,
+            "componentType" : 5126,
+            "count" : 4152,
+            "max" : [
+                1,
+                0.513286828994751,
+                7.400000095367432
+            ],
+            "min" : [
+                -1,
+                -0.0002848617732524872,
+                -1.3058826923370361
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 9,
+            "componentType" : 5126,
+            "count" : 4152,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 10,
+            "componentType" : 5126,
+            "count" : 4152,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 11,
+            "componentType" : 5123,
+            "count" : 6696,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 12,
+            "componentType" : 5126,
+            "count" : 192,
+            "max" : [
+                1,
+                0.513286828994751,
+                -6.796701908111572
+            ],
+            "min" : [
+                -1,
+                -0.025314368307590485,
+                -7.1698102951049805
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 13,
+            "componentType" : 5126,
+            "count" : 192,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 14,
+            "componentType" : 5126,
+            "count" : 192,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 15,
+            "componentType" : 5123,
+            "count" : 288,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 7560,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 7560,
+            "byteOffset" : 7560
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 5040,
+            "byteOffset" : 15120
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 2856,
+            "byteOffset" : 20160
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 180168,
+            "byteOffset" : 23016
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 180168,
+            "byteOffset" : 203184
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 120112,
+            "byteOffset" : 383352
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 45120,
+            "byteOffset" : 503464
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 49824,
+            "byteOffset" : 548584
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 49824,
+            "byteOffset" : 598408
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 33216,
+            "byteOffset" : 648232
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 13392,
+            "byteOffset" : 681448
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 2304,
+            "byteOffset" : 694840
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 2304,
+            "byteOffset" : 697144
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 1536,
+            "byteOffset" : 699448
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 576,
+            "byteOffset" : 700984
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 701560,
+            "uri" : "blue_stage_long.bin"
+        }
+    ]
+}

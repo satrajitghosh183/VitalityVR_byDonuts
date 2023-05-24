@@ -1,0 +1,97 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Object",
+"class": "AchievementEvaluator",
+"language": "GDScript",
+"path": "res://scripts/AchievementEvaluator.gd"
+}, {
+"base": "Node",
+"class": "AudioStreamPlaylist",
+"language": "GDScript",
+"path": "res://scripts/AudioStreamPlaylist.gd"
+}, {
+"base": "Node",
+"class": "DummyAudioStream",
+"language": "GDScript",
+"path": "res://DummyStream.gd"
+}, {
+"base": "Object",
+"class": "GameUtilities",
+"language": "GDScript",
+"path": "res://scripts/GameUtilities.gd"
+}, {
+"base": "Node",
+"class": "SideQuestAPI",
+"language": "GDScript",
+"path": "res://scripts/SideQuestAPI.gd"
+}, {
+"base": "Node",
+"class": "SongDatabase",
+"language": "GDScript",
+"path": "res://scripts/SongDatabase.gd"
+}, {
+"base": "Spatial",
+"class": "YoutubeStreamInterface",
+"language": "GDScript",
+"path": "res://scripts/YoutubeAudioStreamPlayer.gd"
+} ]
+_global_script_class_icons={
+"AchievementEvaluator": "",
+"AudioStreamPlaylist": "",
+"DummyAudioStream": "",
+"GameUtilities": "",
+"SideQuestAPI": "",
+"SongDatabase": "",
+"YoutubeStreamInterface": ""
+}
+
+[application]
+
+config/name="VRworkout"
+run/main_scene="res://Main.tscn"
+config/icon="res://icon.png"
+config/music_directory="/sdcard/Music/Workout"
+config/pc_music_directory="C:/Workout"
+config/vrhealth_config="user://vrhealth.txt"
+config/backend_server="http://backend.vrworkout.at:8080"
+config/room_server="ws://backend.vrworkout.at:33105"
+config/sidequest_client_id="client_0ce3bebc49e33ccf9e8a62cc"
+config/sidequest_api_endpoint="https://api.sidequestvr.com/v2"
+config/youtube_link="https://vrworkout.at/player/"
+
+[audio]
+
+output_latency.web=15
+
+[autoload]
+
+GameVariables="*res://scenes/GameVariables.tscn"
+
+[gdnative]
+
+singletons=[  ]
+singletons_disabled=[  ]
+
+[logging]
+
+file_logging/log_path="/sdcard/vrworkout_log.txt"
+
+[network]
+
+limits/websocket_client/max_in_buffer_kb=1024
+limits/websocket_client/max_out_buffer_kb=1024
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+vram_compression/import_etc=true
+quality/filters/msaa=6
