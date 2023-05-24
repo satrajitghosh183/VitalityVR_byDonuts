@@ -39,7 +39,10 @@ Google Cloud+AMD Instance Usage
 
 Website Images
 
-![WhatsApp Image 2023-04-16 at 05 32 58](https://user-images.githubusercontent.com/83156880/232259172-0475ae1f-8e80-4485-b97d-4f9f7a8ee520.jpg)
+![WhatsApp Image 2023-05-24 at 11 40 49](https://github.com/satrajitghosh183/VitalityVR_byDonuts/assets/83156880/d70fe249-6ad0-4e06-b3b1-61324f3b9b78)
+
+![WhatsApp Image 2023-05-24 at 11 41 24](https://github.com/satrajitghosh183/VitalityVR_byDonuts/assets/83156880/2768b66d-e02e-47c3-a4e3-f3194dec49d6)
+
 
 ![WhatsApp Image 2023-04-16 at 05 33 46](https://user-images.githubusercontent.com/83156880/232259195-1d497d93-7075-4cb2-9327-dc54ec51ed7d.jpg)
 
