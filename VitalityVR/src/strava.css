@@ -1,0 +1,181 @@
+.background-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1440px;
+  height: 1024px;
+  object-fit: cover;
+}
+.right-bar-icon {
+  position: absolute;
+  height: 44.43%;
+  width: 2.1%;
+  top: 27.25%;
+  right: 1.37%;
+  bottom: 28.32%;
+  left: 96.53%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.the {
+  margin: 0;
+}
+.kolkata,
+.the-stats {
+  position: absolute;
+  display: inline-block;
+}
+.the-stats {
+  top: 0;
+  left: 0;
+  font-weight: 500;
+  width: 310px;
+  height: 30.33px;
+}
+.kolkata {
+  top: 106px;
+  left: 67px;
+  font-size: var(--font-size-xl);
+  width: 177px;
+  height: 28px;
+}
+.pin-icon {
+  position: absolute;
+  height: 28.74%;
+  width: 15.53%;
+  top: 71.26%;
+  right: 83.43%;
+  bottom: 0;
+  left: 1.05%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.title,
+.title-and-description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 310px;
+  height: 137.53px;
+}
+.title-and-description {
+  top: 831px;
+  left: 44px;
+}
+.page-title-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 2px solid var(--color-white);
+  box-sizing: border-box;
+  width: 128px;
+  height: 126px;
+}
+.your-workout-equivalent-container {
+  position: absolute;
+  top: 37.23px;
+  left: 16px;
+  display: inline-block;
+  width: 96px;
+  height: 51.55px;
+}
+.page-title {
+  position: absolute;
+  top: -3px;
+  left: 53px;
+  width: 128px;
+  height: 126px;
+  font-size: var(--font-size-mini);
+}
+.svg-map-icon {
+  position: absolute;
+  height: 101.71%;
+  width: 96.11%;
+  top: -0.85%;
+  right: 4.43%;
+  bottom: -0.85%;
+  left: -0.54%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.mirador {
+  position: absolute;
+  top: 104.36px;
+  left: 530.42px;
+  font-weight: 600;
+  display: inline-block;
+  width: 98.17px;
+  height: 14.74px;
+}
+.garia,
+.min {
+  position: absolute;
+  width: 52.33px;
+  height: 16.92px;
+}
+.garia {
+  top: 25.38px;
+  left: 718.28px;
+  display: inline-block;
+}
+.min {
+  top: 131.15px;
+  left: 556.55px;
+}
+.min,
+.min1,
+.patuli {
+  display: inline-block;
+}
+.patuli {
+  position: absolute;
+  top: 315.88px;
+  left: 848.3px;
+  font-weight: 600;
+  width: 77.7px;
+  height: 33.84px;
+}
+.min1 {
+  top: 361px;
+  left: 862.58px;
+  width: 52.33px;
+  height: 16.92px;
+}
+.ingreso,
+.map,
+.min1 {
+  position: absolute;
+}
+.ingreso {
+  top: 610.6px;
+  left: 440.8px;
+  font-weight: 800;
+  text-align: left;
+  display: inline-block;
+  width: 60.25px;
+  height: 16.92px;
+}
+.map {
+  height: 65.76%;
+  width: 64.31%;
+  top: 17.09%;
+  right: 18.61%;
+  bottom: 17.15%;
+  left: 17.08%;
+  text-align: center;
+  font-size: var(--font-size-3xs);
+}
+.strava {
+  position: relative;
+  background-color: var(--color-white);
+  width: 100%;
+  height: 1024px;
+  overflow: hidden;
+  text-align: left;
+  font-size: 32px;
+  color: var(--color-white);
+  font-family: var(--font-inter);
+}

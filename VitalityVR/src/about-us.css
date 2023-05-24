@@ -1,0 +1,101 @@
+.vector-icon {
+  position: absolute;
+  height: 0.49%;
+  width: 4.31%;
+  top: 0.61%;
+  right: 2.29%;
+  bottom: 98.9%;
+  left: 93.4%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.httpslottiefilescom88140-icon {
+  position: absolute;
+  top: 166px;
+  left: 984px;
+  width: 436px;
+  height: 775px;
+  object-fit: cover;
+}
+.we {
+  font-size: 117px;
+}
+.we-are-just-a-group-of-friends {
+  margin: 0;
+}
+.we-are-just-container {
+  position: absolute;
+  top: 196px;
+  left: 82px;
+  font-weight: 500;
+  display: inline-block;
+  width: 913px;
+  height: 358px;
+}
+.about-us-child,
+.about-us-inner,
+.about-us-item {
+  position: absolute;
+  top: 956px;
+  left: 82px;
+  border-radius: var(--br-base);
+  width: 245px;
+  height: 421px;
+  object-fit: cover;
+}
+.about-us-inner,
+.about-us-item {
+  top: 1112px;
+  left: 500px;
+}
+.about-us-inner {
+  top: 899px;
+  left: 867px;
+}
+.meet-the-devs {
+  position: absolute;
+  top: 750px;
+  left: 63px;
+  font-size: 119px;
+  display: flex;
+  font-family: var(--font-abhaya-libre);
+  align-items: center;
+  width: 1169px;
+  height: 124px;
+}
+.group-icon,
+.lingkaran-icon {
+  position: absolute;
+  top: 997.5px;
+  left: 1140.5px;
+  width: 457px;
+  height: 458px;
+}
+.group-icon {
+  height: 37%;
+  width: 194.44%;
+  top: 9.08%;
+  right: -432.29%;
+  bottom: 53.92%;
+  left: 337.85%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.about-us {
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    #000,
+    rgba(7, 7, 7, 0.84) 80.21%,
+    rgba(33, 33, 33, 0.76)
+  );
+  width: 100%;
+  height: 1623px;
+  overflow: hidden;
+  text-align: left;
+  font-size: 65px;
+  color: var(--color-white);
+  font-family: var(--font-poppins);
+}

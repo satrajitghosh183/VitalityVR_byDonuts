@@ -1,0 +1,205 @@
+.signup-child {
+  position: absolute;
+  bottom: 38px;
+  left: 15px;
+  border-radius: var(--br-3xs);
+  width: 727px;
+  height: 954px;
+  object-fit: cover;
+}
+.creating-experiences-worldwide {
+  position: absolute;
+  top: 783px;
+  left: 68px;
+  font-size: 37px;
+  font-weight: 600;
+  color: var(--color-white);
+  display: inline-block;
+  width: 658px;
+}
+.lorem-ipsum-dolor {
+  position: absolute;
+  top: 839px;
+  left: 102px;
+  font-size: var(--font-size-mini);
+  color: #fcf8f5;
+  display: inline-block;
+  width: 540px;
+}
+.signup-inner,
+.signup-item {
+  position: absolute;
+  top: 691px;
+  left: 343px;
+  width: 16px;
+  height: 16px;
+}
+.signup-inner {
+  top: 693px;
+  left: 366px;
+  width: 13px;
+  height: 13px;
+}
+.ellipse-icon,
+.signup-child1 {
+  position: absolute;
+  top: 694px;
+  left: 386px;
+  width: 11px;
+  height: 11px;
+}
+.signup-child1 {
+  left: 404px;
+  width: 10px;
+  height: 10px;
+}
+.create-an-account {
+  position: absolute;
+  top: 264px;
+  left: 857px;
+  font-size: 30px;
+  font-weight: 500;
+}
+.name-child {
+  position: absolute;
+  top: 30.5px;
+  left: -1px;
+  border-top: 2px solid var(--color-peru);
+  box-sizing: border-box;
+  width: 468px;
+  height: 2px;
+}
+.name {
+  position: absolute;
+  top: 362px;
+  left: 857px;
+  width: 466px;
+  height: 31.5px;
+  text-align: left;
+  color: var(--color-tan);
+}
+.email-address {
+  position: absolute;
+  top: 0;
+  left: 0.03px;
+  display: inline-block;
+  width: 185.86px;
+}
+.english,
+.name2,
+.name3 {
+  position: absolute;
+  top: 427px;
+  left: 857px;
+  width: 466px;
+  height: 31.5px;
+  text-align: left;
+  color: var(--color-tan);
+}
+.english,
+.name3 {
+  top: 492px;
+}
+.english {
+  top: 15px;
+  left: 1342px;
+  font-size: var(--font-size-mini);
+  font-weight: 300;
+  color: var(--color-darksalmon-100);
+  display: inline-block;
+  width: 98px;
+  height: 42px;
+}
+.button-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  background: linear-gradient(90.58deg, #db844e, #c17754 99.99%, #c17754);
+  width: 466px;
+  height: 50px;
+}
+.create-account {
+  position: absolute;
+  top: 10px;
+  left: 154px;
+  font-weight: 500;
+}
+.button {
+  position: absolute;
+  top: 577px;
+  left: 857px;
+  width: 466px;
+  height: 50px;
+  font-size: var(--font-size-xl);
+  color: #e5e5e5;
+}
+.login1 {
+  color: var(--color-darksalmon-200);
+}
+.existing-user-login-container {
+  position: absolute;
+  top: 637px;
+  left: 857px;
+  color: var(--color-darksalmon-100);
+}
+.sign-up-using {
+  position: absolute;
+  top: 714px;
+  left: 854px;
+  font-size: var(--font-size-base);
+  text-align: left;
+  display: inline-block;
+  width: 115px;
+  height: 26px;
+}
+.or1 {
+  position: absolute;
+  top: 568px;
+  left: 1042px;
+}
+.line-div,
+.signup-child2 {
+  position: absolute;
+  top: 591.5px;
+  left: 1074.5px;
+  border-top: 1px solid var(--color-tan);
+  box-sizing: border-box;
+  width: 211px;
+  height: 1px;
+}
+.signup-child2 {
+  top: 697.5px;
+  left: 856.5px;
+}
+.fb-1-icon,
+.icon,
+.icon1 {
+  position: absolute;
+  top: 714px;
+  left: 1116px;
+  width: 26px;
+  height: 26px;
+  object-fit: cover;
+}
+.fb-1-icon,
+.icon1 {
+  top: 711px;
+  left: 1285px;
+  width: 29px;
+  height: 29px;
+}
+.fb-1-icon {
+  left: 1198px;
+}
+.signup {
+  position: relative;
+  background-color: var(--color-black);
+  width: 100%;
+  height: 1024px;
+  overflow: hidden;
+  text-align: center;
+  font-size: var(--font-size-lg);
+  color: var(--color-darksalmon-200);
+  font-family: var(--font-poppins);
+}
